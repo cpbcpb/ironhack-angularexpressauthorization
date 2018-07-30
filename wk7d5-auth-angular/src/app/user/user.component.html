@@ -1,0 +1,46 @@
+<div>
+User: {{theActualUser |json}}
+
+</div>
+<div>
+</div>
+
+<h2>Signup Form</h2>
+<form (submit)="tryToSignUp()">
+<label>Username</label>
+<input name="blah" [(ngModel)]="signupUser.username" type="text">
+<label>Password</label>
+<input name="blah" [(ngModel)]="signupUser.password" type="text">
+<button>Complete Registration</button>
+</form>
+
+  
+  
+  <h2>Login Form</h2>
+  <form (submit)="tryToLogin()">
+    {{error}}
+  <label>Username</label>
+  <input name="blah" [(ngModel)]="loginUser.username" type="text">
+  <label>Password</label>
+  <input name="blah" [(ngModel)]="loginUser.password" type="text">
+  <button>Login</button>
+  </form>
+  
+  
+  <button (click)="logMeOut()">Logout</button>
+
+
+<!-- 
+<h1> Signup Form</h1>
+<form>
+  <h2> Login or Signup </h2>
+  <label> Username </label>
+  <input type="text" [(ngModel)]="formInfo.username" name="username"/>
+  <br>
+  <label> Password </label>
+  <input type="password" [(ngModel)]="formInfo.password" name="password"/>
+
+  <button (click)="login()"> login </button>
+  <button (click)="signup()"> signup </button>
+</form>
+<p class="error"> {{ error }} </p> -->
